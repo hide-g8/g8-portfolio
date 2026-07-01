@@ -343,9 +343,9 @@ footer{
 .footer-right{font-size:12px;text-align:right}
 
 /* SCROLL ANIMATION */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s ease,transform 0.75s ease}
-.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.75s ease,transform 0.75s ease}
-.reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.75s ease,transform 0.75s ease}
+.js-ready .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s ease,transform 0.75s ease}
+.js-ready .reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.75s ease,transform 0.75s ease}
+.js-ready .reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.75s ease,transform 0.75s ease}
 .reveal.up,.reveal-left.up,.reveal-right.up{opacity:1;transform:translate(0)}
 .d1{transition-delay:0.1s}
 .d2{transition-delay:0.2s}
@@ -760,6 +760,9 @@ footer{
 
 <script>
 (function(){
+  // Enable animations only after JS loads (prevents flash of invisible content)
+  document.documentElement.classList.add('js-ready');
+
   // NAV scroll class
   var nav = document.getElementById('main-nav');
   window.addEventListener('scroll', function(){
@@ -774,11 +777,20 @@ footer{
         observer.unobserve(e.target);
       }
     });
-  }, {threshold: 0.08});
+  }, {threshold: 0, rootMargin: '0px 0px -60px 0px'});
 
+  // Also show elements already in viewport on load
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){
     observer.observe(el);
   });
+
+  // Fallback: force all visible after short delay
+  setTimeout(function(){
+    document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.top < window.innerHeight) el.classList.add('up');
+    });
+  }, 100);
 })();
 </script>
 </body>
