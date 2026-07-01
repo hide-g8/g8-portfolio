@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>地球人財循環社会の共創 | G8行政書士法人</title>
+<meta name="description" content="G8行政書士法人・国際行政書士 関口秀充による地球人財循環社会共創プロジェクトのポートフォリオ。外国人材受入れから育成・循環・海外展開まで。">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1e3a5f;
+  --navy-dk:#0d2040;
+  --blue:#3a7bd5;
+  --red:#c0392b;
+  --bg:#ffffff;
+  --bg-lt:#f7f9fc;
+  --text:#1a1a2e;
+  --sub:#555e6e;
+  --border:#e0e5ed;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Hiragino Sans','Yu Gothic Medium','Noto Sans JP',Arial,sans-serif;
+  font-size:15px;
+  font-weight:400;
+  line-height:1.9;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.accent{color:#e74c3c}
+.red{color:var(--red)}
+.eyebrow{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--blue);
+  margin-bottom:14px;
+}
+.inner{max-width:1040px;margin:0 auto}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  height:64px;padding:0 56px;
+  background:rgba(255,255,255,0.97);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:box-shadow 0.3s;
+}
+nav.scrolled{box-shadow:0 2px 16px rgba(0,0,0,0.08)}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.logo-mark{
+  width:34px;height:34px;border-radius:50%;
+  background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:11px;font-weight:900;letter-spacing:0.5px;flex-shrink:0;
+}
+.logo-text{font-size:13px;font-weight:700;color:var(--navy);line-height:1.3}
+.logo-sub{font-size:11px;color:var(--sub);font-weight:400}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{
+  font-size:13px;color:var(--sub);
+  padding-bottom:2px;border-bottom:2px solid transparent;
+  transition:color 0.2s,border-color 0.2s;
+}
+.nav-links a:hover{color:var(--navy);border-color:var(--red)}
+.nav-cta{
+  border:1.5px solid var(--navy);border-radius:100px;
+  padding:7px 20px;font-size:12px;font-weight:600;color:var(--navy);
+  transition:background 0.2s,color 0.2s;cursor:pointer;
+}
+.nav-cta:hover{background:var(--navy);color:#fff}
+
+/* BUTTONS */
+.btn-outline-white{
+  display:inline-block;
+  border:1.5px solid rgba(255,255,255,0.45);
+  color:#fff;padding:14px 32px;border-radius:100px;
+  font-size:14px;font-weight:600;
+  transition:background 0.2s,border-color 0.2s;cursor:pointer;
+}
+.btn-outline-white:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.7)}
+.btn-filled-red{
+  display:inline-block;
+  background:var(--red);color:#fff;
+  padding:14px 32px;border-radius:100px;
+  font-size:14px;font-weight:600;
+  border:1.5px solid var(--red);
+  transition:opacity 0.2s;cursor:pointer;
+}
+.btn-filled-red:hover{opacity:0.88}
+.btn-outline-navy{
+  display:inline-block;
+  border:1.5px solid var(--navy);color:var(--navy);
+  padding:11px 26px;border-radius:100px;
+  font-size:13px;font-weight:600;
+  transition:background 0.2s,color 0.2s;cursor:pointer;
+}
+.btn-outline-navy:hover{background:var(--navy);color:#fff}
+
+/* HERO */
+#hero{
+  position:relative;
+  min-height:100vh;
+  background:var(--navy-dk);
+  display:flex;align-items:center;
+  padding:120px 80px 80px;
+  overflow:hidden;
+}
+.hero-bg-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:0.18;z-index:0;
+}
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:radial-gradient(ellipse at 60% 40%,rgba(58,123,213,0.08) 0%,transparent 70%);
+}
+.hero-grid{
+  position:absolute;inset:0;z-index:1;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.06) 1px,transparent 1px);
+  background-size:60px 60px;
+  opacity:0.06;
+}
+.hero-content{position:relative;z-index:2;max-width:680px}
+.hero-eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(58,123,213,0.9);margin-bottom:20px;
+}
+#hero h1{
+  font-size:clamp(36px,5.5vw,68px);
+  font-weight:900;line-height:1.2;
+  color:#fff;margin-bottom:16px;
+}
+.hero-en{
+  font-size:13px;color:rgba(255,255,255,0.5);
+  letter-spacing:1px;margin-bottom:24px;
+}
+.hero-body{
+  max-width:580px;font-size:15px;color:rgba(255,255,255,0.78);
+  line-height:1.9;margin-bottom:28px;
+}
+.hero-signature{
+  display:inline-block;
+  border:1px solid rgba(255,255,255,0.22);
+  border-radius:6px;padding:10px 20px;
+  font-size:13px;color:rgba(255,255,255,0.7);
+  font-weight:600;margin-bottom:36px;letter-spacing:0.5px;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
+.scroll-indicator{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:2px;text-transform:uppercase;
+}
+.scroll-line{
+  width:1px;height:36px;background:rgba(255,255,255,0.3);
+  animation:pulse-line 1.8s ease-in-out infinite;
+}
+@keyframes pulse-line{
+  0%,100%{opacity:0.3;transform:scaleY(0.6)}
+  50%{opacity:0.8;transform:scaleY(1)}
+}
+
+/* SECTIONS */
+section{padding:100px 80px}
+section h2{
+  font-size:clamp(26px,3vw,40px);
+  font-weight:900;line-height:1.3;margin-bottom:16px;
+}
+.section-lead{color:var(--sub);max-width:600px;margin-bottom:48px;line-height:1.8}
+.section-lt{background:var(--bg-lt)}
+.section-dark{background:var(--navy-dk);color:#fff}
+.section-dark .eyebrow{color:rgba(58,123,213,0.85)}
+.section-dark h2{color:#fff}
+.section-dark .section-lead{color:rgba(255,255,255,0.65)}
+
+/* 2COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.two-col.reverse{direction:rtl}
+.two-col.reverse>*{direction:ltr}
+
+/* CARDS */
+.card-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+.card{
+  border:1px solid var(--border);border-radius:8px;
+  padding:24px;background:#fff;
+  transition:border-color 0.25s,transform 0.25s;
+}
+.card:hover{border-color:var(--blue);transform:translateY(-3px)}
+.card-icon{font-size:22px;margin-bottom:10px}
+.card-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.card-desc{font-size:13px;color:var(--sub);line-height:1.7}
+
+/* MISSION IMG */
+.mission-img{border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,0.1);width:100%}
+
+/* CIRCULATION */
+.step-list{display:flex;flex-direction:column;gap:14px}
+.step-item{
+  display:flex;gap:16px;align-items:flex-start;
+  border:1px solid var(--border);border-radius:8px;
+  padding:16px 20px;background:#fff;
+  transition:border-color 0.25s,transform 0.25s;
+}
+.step-item:hover{border-color:var(--blue);transform:translateY(-2px)}
+.step-num{
+  width:28px;height:28px;border-radius:50%;
+  background:var(--navy);color:#fff;
+  font-size:11px;font-weight:900;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  margin-top:2px;
+}
+.step-body{}
+.step-title{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.step-desc{font-size:12px;color:var(--sub);line-height:1.7}
+.circ-footer{
+  background:var(--navy);color:#fff;
+  text-align:center;padding:20px 32px;
+  border-radius:8px;margin-top:40px;
+  font-size:15px;font-weight:600;
+}
+
+/* PHILOSOPHY */
+.philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.dark-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.10);
+  border-radius:8px;padding:28px;
+  transition:background 0.25s;
+}
+.dark-card:hover{background:rgba(255,255,255,0.09)}
+.dc-tag{
+  display:inline-block;
+  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  padding:3px 10px;border-radius:100px;margin-bottom:12px;
+}
+.dc-tag.blue{background:rgba(58,123,213,0.2);color:#7bb3f0}
+.dc-tag.red{background:rgba(192,57,43,0.2);color:#e88a80}
+.dc-label{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:8px}
+.dc-title{font-size:17px;font-weight:900;color:#fff;margin-bottom:10px}
+.dc-desc{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7}
+
+/* MODEL */
+.model-img{border-radius:10px;width:100%;margin-bottom:40px}
+.step-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step-card{
+  border-top:3px solid var(--navy);
+  border:1px solid var(--border);
+  border-top:3px solid var(--navy);
+  border-radius:8px;padding:20px;background:#fff;
+  transition:border-color 0.25s,transform 0.25s;
+}
+.step-card:hover{transform:translateY(-3px)}
+.sc-num{font-size:10px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:6px}
+.sc-title{font-size:13px;font-weight:700;color:var(--navy)}
+.model-banner{
+  background:var(--navy-dk);color:#fff;
+  text-align:center;padding:22px 32px;
+  border-radius:8px;margin-top:36px;
+  font-size:15px;font-weight:600;
+}
+
+/* BENEFITS */
+.benefits-col-right{display:flex;flex-direction:column;gap:20px}
+.ba-card{border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.ba-head{padding:14px 20px;font-size:13px;font-weight:700;color:#fff}
+.ba-head.before{background:var(--red)}
+.ba-head.after{background:var(--navy)}
+.ba-body{padding:16px 20px;background:#fff}
+.ba-item{
+  display:flex;gap:10px;align-items:flex-start;
+  font-size:13px;color:var(--sub);line-height:1.6;
+  padding:6px 0;border-bottom:1px solid var(--border);
+}
+.ba-item:last-child{border-bottom:none}
+.ba-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:8px}
+.ba-dot.red{background:var(--red)}
+.ba-dot.navy{background:var(--navy)}
+.cta-band{
+  background:var(--navy-dk);color:#fff;
+  padding:28px 40px;border-radius:8px;margin-top:40px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+}
+.cta-band-text{font-size:14px;font-weight:600;opacity:0.9}
+.sticky-img{position:sticky;top:88px}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.gallery-item{border-radius:8px;overflow:hidden;border:1px solid var(--border);background:#fff;transition:transform 0.25s,box-shadow 0.25s}
+.gallery-item:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,0.1)}
+.gallery-img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.gallery-info{padding:16px}
+.gallery-tag{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.gallery-title{font-size:13px;font-weight:700;color:var(--navy)}
+.gallery-desc{font-size:12px;color:var(--sub);margin-top:4px;line-height:1.6}
+
+/* PROFILE */
+.profile-card{
+  border:1px solid var(--border);border-radius:8px;
+  padding:40px;background:#fff;
+  display:flex;gap:32px;align-items:flex-start;
+  max-width:720px;margin:0 auto;
+}
+.avatar{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--navy);color:#fff;
+  font-size:22px;font-weight:900;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.profile-name{font-size:22px;font-weight:900;color:var(--navy);margin-bottom:4px}
+.profile-title{font-size:13px;color:var(--sub);margin-bottom:16px}
+.profile-body{font-size:14px;color:var(--sub);line-height:1.9;margin-bottom:20px}
+
+/* CONTACT */
+#contact{
+  background:var(--navy-dk);color:#fff;
+  padding:100px 80px;text-align:center;
+}
+#contact h2{font-size:clamp(26px,3vw,40px);font-weight:900;color:#fff;margin-bottom:12px}
+#contact p{color:rgba(255,255,255,0.65);margin-bottom:32px;font-size:15px}
+
+/* FOOTER */
+footer{
+  background:#0d2040;color:rgba(255,255,255,0.5);
+  padding:40px 80px;
+}
+.footer-inner{
+  max-width:1040px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:32px;align-items:center;
+}
+.footer-left{font-size:13px;line-height:1.8}
+.footer-left strong{color:rgba(255,255,255,0.85);font-size:14px;font-weight:700;display:block;margin-bottom:2px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:12px;color:rgba(255,255,255,0.5);transition:color 0.2s}
+.footer-links a:hover{color:#fff}
+.footer-right{font-size:12px;text-align:right}
+
+/* SCROLL ANIMATION */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s ease,transform 0.75s ease}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.75s ease,transform 0.75s ease}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.75s ease,transform 0.75s ease}
+.reveal.up,.reveal-left.up,.reveal-right.up{opacity:1;transform:translate(0)}
+.d1{transition-delay:0.1s}
+.d2{transition-delay:0.2s}
+.d3{transition-delay:0.3s}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:0 24px}
+  .nav-links{display:none}
+  section{padding:72px 28px}
+  #hero{padding:100px 28px 72px}
+  .two-col{grid-template-columns:1fr;gap:36px}
+  .two-col.reverse{direction:ltr}
+  .step-cards{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr;gap:20px;text-align:center}
+  .footer-right{text-align:center}
+  .footer-links{justify-content:center}
+  .cta-band{flex-direction:column;text-align:center}
+  .sticky-img{position:static}
+  .profile-card{flex-direction:column;align-items:center;text-align:center;padding:28px}
+  #contact{padding:72px 28px}
+  footer{padding:36px 24px}
+}
+@media(max-width:560px){
+  .card-grid-2{grid-template-columns:1fr 1fr}
+  .philosophy-grid{grid-template-columns:1fr}
+  .step-cards{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-logo">
+    <div class="logo-mark">G8</div>
+    <div>
+      <div class="logo-text">G8行政書士法人</div>
+      <div class="logo-sub">国際行政書士 関口秀充</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#mission">理念</a>
+    <a href="#circulation">循環モデル</a>
+    <a href="#model">実装モデル</a>
+    <a href="#works">実績</a>
+    <a href="#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <img class="hero-bg-img" src="images/slide01.png" alt="地球人財循環社会の共創 メインビジュアル">
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">G8行政書士法人 ／ 国際行政書士 関口秀充</p>
+    <h1>地球人財循環社会の<span class="accent">共創</span></h1>
+    <p class="hero-en">Co-creation of a Global Human Resource Circulation Society</p>
+    <p class="hero-body">尊き人財を守り、育て、循環させ、母国で生かし、日本の地域企業と共に世界へ羽ばたく。<br>地球人財を共に育て、共に生かし、共に循環させる時代へ。</p>
+    <div class="hero-signature">G8 = Gaia × Glocal × Growth × ∞</div>
+    <div class="hero-btns">
+      <a href="#works" class="btn-outline-white">プロジェクトを見る</a>
+      <a href="#contact" class="btn-filled-red">お問い合わせ</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: MISSION -->
+<section id="mission">
+  <div class="inner">
+    <div class="two-col">
+      <div class="reveal-left">
+        <p class="eyebrow">Our Mission</p>
+        <h2>命を<span class="red">生かす！</span></h2>
+        <p class="section-lead">G8は、宇宙に広がる無限の可能性に命を生かします。4つの活動軸で、地球人財と日本の地域企業をつなぎます。</p>
+        <div class="card-grid-2">
+          <div class="card reveal d1">
+            <div class="card-icon">🤝</div>
+            <div class="card-title">人と人をつなぐ</div>
+            <div class="card-desc">国境を越えた信頼の架け橋に</div>
+          </div>
+          <div class="card reveal d2">
+            <div class="card-icon">🌱</div>
+            <div class="card-title">人財を育てる</div>
+            <div class="card-desc">尊厳と可能性を大切に</div>
+          </div>
+          <div class="card reveal d1">
+            <div class="card-icon">🔄</div>
+            <div class="card-title">循環をつくる</div>
+            <div class="card-desc">持続可能な人財循環モデルを</div>
+          </div>
+          <div class="card reveal d2">
+            <div class="card-icon">🌍</div>
+            <div class="card-title">世界へ羽ばたく</div>
+            <div class="card-desc">母国・日本・世界の未来へ</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <img class="mission-img" src="images/slide02.png" alt="G8コンセプト図">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: CIRCULATION -->
+<section id="circulation" class="section-lt">
+  <div class="inner">
+    <div class="two-col">
+      <div class="reveal-left">
+        <img class="mission-img" src="images/slide03.png" alt="地球人財循環社会 6ステップ循環図">
+      </div>
+      <div class="reveal-right">
+        <p class="eyebrow">Circulation Model</p>
+        <h2>地球人財循環社会<span class="red">とは？</span></h2>
+        <p class="section-lead">外国人財を受け入れて終わりではない。6つのステップで、受入れから世界展開まで循環させます。</p>
+        <div class="step-list">
+          <div class="step-item reveal d1">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">受入れ</div>
+              <div class="step-desc">適正な受入れと生活サポート</div>
+            </div>
+          </div>
+          <div class="step-item reveal d1">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">守る・定着支援</div>
+              <div class="step-desc">安心・安全な環境づくりと相談・面談で支える</div>
+            </div>
+          </div>
+          <div class="step-item reveal d2">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">育てる</div>
+              <div class="step-desc">技能・日本語・あり方を学び、成長を支援</div>
+            </div>
+          </div>
+          <div class="step-item reveal d2">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <div class="step-title">循環させる</div>
+              <div class="step-desc">キャリア形成と次のステージへつなぐ</div>
+            </div>
+          </div>
+          <div class="step-item reveal d3">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <div class="step-title">母国で生かす</div>
+              <div class="step-desc">就業・起業・リーダー化で社会に貢献</div>
+            </div>
+          </div>
+          <div class="step-item reveal d3">
+            <div class="step-num">6</div>
+            <div class="step-body">
+              <div class="step-title">日本の地域企業と共に世界へ</div>
+              <div class="step-desc">信頼と絆を力に、共に海外市場で活躍</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="circ-footer reveal">「共に育て、共に生かし、共に循環させる時代へ。」</div>
+  </div>
+</section>
+
+<!-- SECTION 3: PHILOSOPHY -->
+<section id="philosophy" class="section-dark">
+  <div class="inner">
+    <div class="two-col">
+      <div class="reveal-left">
+        <p class="eyebrow">Philosophy</p>
+        <h2>G8の理念 = Gaia × Glocal × Growth × ∞</h2>
+        <p class="section-lead">G8の哲学は、地球・グローカル・成長・無限の可能性という4つの軸で構成されます。人財と企業と地域と社会が共に育ち、共に生きる世界の実現を目指します。</p>
+        <a href="#model" class="btn-outline-white">実装モデルを見る</a>
+      </div>
+      <div class="reveal-right">
+        <img class="mission-img" src="images/slide04.png" alt="G8の理念">
+      </div>
+    </div>
+    <div class="philosophy-grid">
+      <div class="dark-card reveal d1">
+        <div class="dc-tag blue">Gaia</div>
+        <div class="dc-label">地球・共生</div>
+        <div class="dc-title">地球</div>
+        <div class="dc-desc">すべての命は一つであり、地球も宇宙も自分の一部であるという大きな視点。</div>
+      </div>
+      <div class="dark-card reveal d2">
+        <div class="dc-tag red">Glocal</div>
+        <div class="dc-label">グローカル・連携</div>
+        <div class="dc-title">グローカル</div>
+        <div class="dc-desc">地域から世界へつながること。それぞれの土地に根付く歴史・文化・習慣を尊重すること。</div>
+      </div>
+      <div class="dark-card reveal d1">
+        <div class="dc-tag blue">Growth</div>
+        <div class="dc-label">成長・発展</div>
+        <div class="dc-title">成長</div>
+        <div class="dc-desc">人財・企業・地域・社会が共に成長すること。</div>
+      </div>
+      <div class="dark-card reveal d2">
+        <div class="dc-tag red">8=∞</div>
+        <div class="dc-label">無限の可能性</div>
+        <div class="dc-title">無限</div>
+        <div class="dc-desc">地球人財循環によって、宇宙に広がる無限の可能性に命を生かす。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: MODEL -->
+<section id="model">
+  <div class="inner">
+    <p class="eyebrow reveal">Implementation Model</p>
+    <h2 class="reveal">G8が描く<span class="red">実装モデル</span></h2>
+    <p class="section-lead reveal">人財循環を、事業と制度で実装する。採用・来日から日越共創まで、8ステップで繋ぎます。</p>
+    <img class="model-img reveal" src="images/slide05.png" alt="G8実装モデル 8ステップフロー">
+    <div class="step-cards">
+      <div class="step-card reveal d1">
+        <div class="sc-num">STEP 01</div>
+        <div class="sc-title">採用・来日</div>
+      </div>
+      <div class="step-card reveal d2">
+        <div class="sc-num">STEP 02</div>
+        <div class="sc-title">日本で育成</div>
+      </div>
+      <div class="step-card reveal d3">
+        <div class="sc-num">STEP 03</div>
+        <div class="sc-title">定着支援・自社支援化</div>
+      </div>
+      <div class="step-card reveal d1">
+        <div class="sc-num">STEP 04</div>
+        <div class="sc-title">支援費削減で資金創出</div>
+      </div>
+      <div class="step-card reveal d2">
+        <div class="sc-num">STEP 05</div>
+        <div class="sc-title">リーダー育成・OJT拠点</div>
+      </div>
+      <div class="step-card reveal d3">
+        <div class="sc-num">STEP 06</div>
+        <div class="sc-title">母国で活躍・起業</div>
+      </div>
+      <div class="step-card reveal d1">
+        <div class="sc-num">STEP 07</div>
+        <div class="sc-title">地域企業の海外進出</div>
+      </div>
+      <div class="step-card reveal d2">
+        <div class="sc-num">STEP 08</div>
+        <div class="sc-title">日越共創・持続的繁栄</div>
+      </div>
+    </div>
+    <div class="model-banner reveal">受け入れで終わらない。育成・循環・海外展開までつなぐ。</div>
+  </div>
+</section>
+
+<!-- SECTION 5: BENEFITS -->
+<section id="benefits" class="section-lt">
+  <div class="inner">
+    <p class="eyebrow reveal">Value Proposition</p>
+    <h2 class="reveal">自社支援化が生み出す<span class="red">好循環</span></h2>
+    <p class="section-lead reveal">リーダー育成や海外進出の資金を、自社支援化により捻出。コスト削減が、持続可能な人財循環への投資に変わります。</p>
+    <div class="two-col">
+      <div class="sticky-img reveal-left">
+        <img class="mission-img" src="images/slide06.png" alt="自社支援化の好循環 Before/After">
+      </div>
+      <div class="benefits-col-right reveal-right">
+        <div class="ba-card">
+          <div class="ba-head before">Before — 現状の課題</div>
+          <div class="ba-body">
+            <div class="ba-item"><div class="ba-dot red"></div>支援費が高い</div>
+            <div class="ba-item"><div class="ba-dot red"></div>受入れ主体性が弱い</div>
+            <div class="ba-item"><div class="ba-dot red"></div>定着率に課題</div>
+            <div class="ba-item"><div class="ba-dot red"></div>実態把握がしにくい</div>
+          </div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-head after">After — 自社支援化で変わること</div>
+          <div class="ba-body">
+            <div class="ba-item"><div class="ba-dot navy"></div>支援費を削減</div>
+            <div class="ba-item"><div class="ba-dot navy"></div>外国人財との関係強化</div>
+            <div class="ba-item"><div class="ba-dot navy"></div>定着率向上</div>
+            <div class="ba-item"><div class="ba-dot navy"></div>法的手続きは専門家が支援</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-band reveal">
+      <div class="cta-band-text">捻出資金 → 待遇向上・リーダー育成・海外進出投資</div>
+      <a href="#contact" class="btn-filled-red">相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: WORKS GALLERY -->
+<section id="works">
+  <div class="inner">
+    <p class="eyebrow reveal">Our Works</p>
+    <h2 class="reveal">プロジェクト<span class="red">実績</span></h2>
+    <p class="section-lead reveal">地球人財循環社会の共創に向けて作成した、ビジョン資料・事業設計ドキュメントです。</p>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal d1">
+        <img class="gallery-img" src="images/slide01.png" alt="地球人財循環社会の共創 メインビジュアル">
+        <div class="gallery-info">
+          <div class="gallery-tag">Vision</div>
+          <div class="gallery-title">地球人財循環社会の共創</div>
+          <div class="gallery-desc">メインビジュアル</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal d2">
+        <img class="gallery-img" src="images/slide02.png" alt="G8コンセプト図">
+        <div class="gallery-info">
+          <div class="gallery-tag">Concept</div>
+          <div class="gallery-title">G8コンセプト図</div>
+          <div class="gallery-desc">4アイコン：人と人・育てる・循環・世界</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal d3">
+        <img class="gallery-img" src="images/slide03.png" alt="循環モデル 6ステップ図解">
+        <div class="gallery-info">
+          <div class="gallery-tag">Infographic</div>
+          <div class="gallery-title">循環モデル 6ステップ図解</div>
+          <div class="gallery-desc">地球人財循環社会とは？</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal d1">
+        <img class="gallery-img" src="images/slide04.png" alt="G8の理念">
+        <div class="gallery-info">
+          <div class="gallery-tag">Philosophy</div>
+          <div class="gallery-title">G8の理念</div>
+          <div class="gallery-desc">Gaia × Glocal × Growth × ∞</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal d2">
+        <img class="gallery-img" src="images/slide05.png" alt="実装モデル 8ステップ">
+        <div class="gallery-info">
+          <div class="gallery-tag">Flow</div>
+          <div class="gallery-title">実装モデル 8ステップ</div>
+          <div class="gallery-desc">採用・来日から日越共創まで</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal d3">
+        <img class="gallery-img" src="images/slide06.png" alt="自社支援化 Before/After">
+        <div class="gallery-info">
+          <div class="gallery-tag">Comparison</div>
+          <div class="gallery-title">自社支援化 Before/After</div>
+          <div class="gallery-desc">好循環のメカニズム</div>
+        </div>
+      </div>
+      <div class="gallery-item reveal d1">
+        <img class="gallery-img" src="images/slide07.png" alt="関連資料">
+        <div class="gallery-info">
+          <div class="gallery-tag">Document</div>
+          <div class="gallery-title">関連資料</div>
+          <div class="gallery-desc">参考ドキュメント一覧</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: PROFILE -->
+<section id="profile" class="section-lt">
+  <div class="inner" style="text-align:center">
+    <p class="eyebrow reveal">Profile</p>
+    <h2 class="reveal">代表者<span class="red">プロフィール</span></h2>
+    <div style="height:40px"></div>
+    <div class="profile-card reveal">
+      <div class="avatar">関</div>
+      <div>
+        <div class="profile-name">関口 秀充</div>
+        <div class="profile-title">国際行政書士 / G8行政書士法人代表</div>
+        <p class="profile-body">外国人材の受入れ支援から、育成・定着・循環・海外展開まで一貫してサポート。「地球人財循環社会の共創」をビジョンに掲げ、日本の地域企業と外国人財が共に成長・発展できる仕組みづくりに取り組んでいます。</p>
+        <a href="#contact" class="btn-outline-navy">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner" style="text-align:center">
+    <h2 class="reveal">お問い合わせ</h2>
+    <p class="reveal d1">地球人財循環社会の共創に向けて、まずはお気軽にご連絡ください。</p>
+    <a href="mailto:g8houmu@gmail.com" class="btn-filled-red reveal d2">メールで相談する</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <strong>G8行政書士法人</strong>
+      G8 Administrative Lawyer Corporation<br>
+      国際行政書士 関口秀充
+    </div>
+    <div class="footer-links">
+      <a href="#philosophy">理念</a>
+      <a href="#circulation">循環モデル</a>
+      <a href="#model">実装モデル</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+    <div class="footer-right">© 2025 G8行政書士法人</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // NAV scroll class
+  var nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, {passive:true});
+
+  // Intersection Observer for reveal animations
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting) {
+        e.target.classList.add('up');
+        observer.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.08});
+
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){
+    observer.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
